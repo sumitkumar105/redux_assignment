@@ -1,0 +1,50 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.main-section {
+  margin: auto;
+  height: 800px;
+  width: 800px;
+  overflow: scroll;
+}
+.container {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  height: auto;
+  width: 500px;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.product-image {
+  display: flex;
+  justify-content: center;
+}
+.images {
+  margin-top: 20px;
+  height: 300px;
+  width: 300px;
+}
+/* .details {
+  display: flex;
+  justify-content: center;
+} */
+p {
+  width: auto;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 21px;
+  font-weight: bold;
+  margin: 15px;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+table {
+  border: 1px solid black;
+  height: auto;
+}
