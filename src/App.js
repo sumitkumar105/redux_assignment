@@ -1,11 +1,15 @@
 // import "./App.css";
 import React from "react";
-import Card from "./pages/component/Card";
+import ProductList from "./pages/component/ProductList";
+import { BrowserRouter } from "react-router-dom";
+import Routing from "./Routes/Routing";
+// import ProductDetails from "./pages/component/ProductDetails";
+// import Routers from "./Routes/Routers";
 
 function App() {
   return (
     <>
-      <Card />
+      <Routing />
     </>
   );
 }

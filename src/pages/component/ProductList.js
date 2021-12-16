@@ -1,6 +1,6 @@
 import React from "react";
 import "../../App.css";
-const Card = () => {
+const ProductList = () => {
   const Add = () => {
     alert("you clicked the card!!");
   };
@@ -146,4 +146,4 @@ const Card = () => {
     </div>
   );
 };
-export default Card;
+export default ProductList;
