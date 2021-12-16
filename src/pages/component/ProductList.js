@@ -1,8 +1,12 @@
 import React from "react";
 import "../../App.css";
+import {useSelector} from "react-redux";
 const ProductList = () => {
+  const products = useSelector(state => (state));
+  console.log(products);
   const Add = () => {
     alert("you clicked the card!!");
+    console.log("data present")
   };
   return (
     <div className="main-section">
