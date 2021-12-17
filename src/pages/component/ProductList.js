@@ -26,6 +26,7 @@ const ProductList = () => {
 
   const Add = () => {
     alert("you clicked the card!!");
+    console.log("data present");
   };
   useEffect(() => {
     FetchProducts();
