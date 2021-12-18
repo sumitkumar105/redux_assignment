@@ -10,8 +10,7 @@ export default function Routing() {
       <Router>
         <Routes>
           <Route exact path="/" element={<ProductList />} />
-          <Route exact path="/details" element={<ProductDetails />} />
-          
+          <Route exact path="/details/:prodId" element={<ProductDetails />} />
         </Routes>
       </Router>
     </div>

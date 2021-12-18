@@ -48,3 +48,19 @@ table {
   border: 1px solid black;
   height: auto;
 }
+.detail_heading {
+  height: 650px;
+  width: 100%;
+  border: 5px solid #ffff00;
+  display: flex;
+  justify-content: center;
+}
+.Details_card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.image_selecteddProduct {
+  height: 600px;
+  width: 500px;
+}
