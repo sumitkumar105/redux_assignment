@@ -2,7 +2,7 @@ import React from "react";
 import "../../App.css";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
-import { selectedProduct } from "../../Redux/Actions/ProductAction";
+import { fetchSelectedProducts } from "../../Redux/Actions/ProductAction";
 // import { useLocation } from "react-router";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
@@ -15,15 +15,15 @@ export default function ProductDetails() {
 
   console.log("id of product", prodId);
 
-  async function fetchselectedProduct() {
-    const Select_item = await axios.get(
-      `https://fakestoreapi.com/products/${prodId}`
-    );
-    dispatch(selectedProduct(Select_item.data));
-    console.log("slected product", Select_item.data);
-  }
+  // async function fetchselectedProduct() {
+  //   const Select_item = await axios.get(
+  //     `https://fakestoreapi.com/products/${prodId}`
+  //   );
+  //   dispatch(selectedProduct(Select_item.data));
+  //   console.log("slected product", Select_item.data);
+  // }
   useEffect(() => {
-    fetchselectedProduct();
+    dispatch(fetchSelectedProducts(prodId));
   }, []);
 
   // async function FetchSelectedProducts() {

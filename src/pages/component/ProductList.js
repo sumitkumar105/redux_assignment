@@ -3,35 +3,34 @@ import "../../App.css";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import axios from "axios";
-import { setProduct } from "../../Redux/Actions/ProductAction";
+import { setProduct, fetchProducts } from "../../Redux/Actions/ProductAction";
 
 const ProductList = () => {
   // const history = useNavigate();
   const products_list = useSelector((state) => state.allProduct.Products);
   const dispatch = useDispatch();
 
-  async function FetchProducts() {
-    const ProductData = await axios
-      .get("https://fakestoreapi.com/products")
-      .catch((err) => console.log(err));
-    dispatch(setProduct(ProductData.data));
-    // console.log(ProductData.data);
-  }
+  // async function FetchProducts() {
+  //   const ProductData = await axios
+  //     .get("https://fakestoreapi.com/products")
+  //     .catch((err) => console.log(err));
+  //   dispatch(setProduct(ProductData.data));
+  //   // console.log(ProductData.data);
+  // }
   const { id, title, price, description, category, image } = products_list;
   // const NavigateToReturn = (id) => {
   //   console.log("id is equal to ", id);
   //   history(`/details/${id}`);
   // };
   useEffect(() => {
-    FetchProducts();
+    dispatch(fetchProducts());
   });
   return (
     <div className="main-section">
       {products_list.map((e, index) => {
         return (
           <>
-            <Link to={`/details/${e.id}`}>
+            <Link to={`/details/${e.id}`} className="disabled-link">
               <div className="main">
                 <table>
                   <tr>
